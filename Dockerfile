@@ -12,11 +12,13 @@ CMD ["/sbin/my_init"]
 # Install basic stuff
 # ===================
 RUN apt-get -qq update
-RUN apt-get -y install autoconf bison build-essential \
-  curl wget git-core libffi-dev \
-  libgdbm-dev libgdbm3 libncurses5-dev libpq-dev libreadline6-dev \
-  libssl-dev libxml2-dev libxslt1-dev libyaml-dev zlib1g-dev
+RUN apt-get -y install git-core build-essential
+  # libffi-dev autoconf bison \
+  # libgdbm-dev libgdbm3 libncurses5-dev libreadline6-dev \
+  # libssl-dev libyaml-dev zlib1g-dev
 
+# for nokogiri
+RUN apt-get install -y libxml2-dev libxslt1-dev
 # for capybara-webkit
 RUN apt-get install -y libqt4-webkit libqt4-dev xvfb
 # for js runtime
