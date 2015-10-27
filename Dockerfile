@@ -13,7 +13,7 @@ CMD ["/sbin/my_init"]
 # ===================
 RUN apt-get -qq update
 RUN apt-get -y install git-core build-essential \
-  libssl-dev libreadline6-dev libpq-dev zlib1g-dev
+  libssl-dev libreadline6-dev libpq-dev libyaml-dev zlib1g-dev
 
 # for nokogiri
 RUN apt-get install -y libxml2-dev libxslt1-dev
