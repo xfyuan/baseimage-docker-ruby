@@ -12,10 +12,10 @@ CMD ["/sbin/my_init"]
 # Install basic stuff
 # ===================
 RUN apt-get -qq update
-RUN apt-get -y install git-core build-essential
+RUN apt-get -y install git-core build-essential \
   # libffi-dev autoconf bison \
   # libgdbm-dev libgdbm3 libncurses5-dev libreadline6-dev \
-  # libssl-dev libyaml-dev zlib1g-dev
+  libssl-dev libyaml-dev libreadline-dev zlib1g-dev
 
 # for nokogiri
 RUN apt-get install -y libxml2-dev libxslt1-dev
