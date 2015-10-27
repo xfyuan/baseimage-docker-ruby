@@ -2,6 +2,7 @@
 # make sure you lock down to a specific version, not to `latest`!
 FROM phusion/baseimage:0.9.17
 
+# Set correct environment variables.
 ENV HOME /root
 ENV RUBY_VERSION 2.2.3
 
